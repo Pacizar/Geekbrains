@@ -18,7 +18,7 @@ for i in my_list:
 x_list = list(input("Введите числа: "))
 
 for x in range(1, len(x_list), 2):
-    x_list[x - 1], x_list[x] = x_list[x], x_list[x - 1]
+    x_list[x - 1], x_list[x] = [x_list[x], x_list[x - 1]]
 
 print(x_list)
 
@@ -101,6 +101,5 @@ for product in inventory_tuple_list:
                 output_dict.get(key).append(value)
         else:
             output_dict.update({key: [value]})
-
 
 print(f'собрана аналитика: {output_dict}')
